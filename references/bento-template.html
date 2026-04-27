@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{프로젝트명} — Marketing Frame Bento</title>
+<style>
+:root {
+  --bg: #0a0a0a;
+  --fg: #fafafa;
+  --gray-900: #1a1a1a;
+  --gray-700: #404040;
+  --gray-500: #737373;
+  --gray-300: #d4d4d4;
+  --accent: #fafafa;
+  --critical: #ef4444;
+  --high: #f59e0b;
+  --medium: #10b981;
+  --info: #3b82f6;
+  --insight: #a855f7;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Pretendard", sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  font-feature-settings: "ss01", "ss02";
+  letter-spacing: -0.01em;
+  padding: 48px;
+}
+.header {
+  margin-bottom: 48px;
+  border-bottom: 1px solid var(--gray-700);
+  padding-bottom: 24px;
+}
+.header h1 {
+  font-size: 56px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.header .meta {
+  display: flex;
+  gap: 24px;
+  font-size: 13px;
+  color: var(--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+}
+.box {
+  background: var(--gray-900);
+  border: 1px solid var(--gray-700);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+.box.dark {
+  background: var(--fg);
+  color: var(--bg);
+  border-color: var(--fg);
+}
+.box .label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gray-500);
+  margin-bottom: 12px;
+}
+.box.dark .label { color: var(--gray-700); }
+.box .title {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+.box .big-num {
+  font-size: 96px;
+  font-weight: 900;
+  letter-spacing: -0.06em;
+  line-height: 0.9;
+  margin-bottom: 12px;
+}
+.box .body {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--gray-300);
+}
+.box.dark .body { color: var(--gray-700); }
+
+/* Grid placements */
+.span-12 { grid-column: span 12; }
+.span-8 { grid-column: span 8; }
+.span-6 { grid-column: span 6; }
+.span-4 { grid-column: span 4; }
+.span-3 { grid-column: span 3; }
+
+/* Pain levels */
+.pain-list { list-style: none; }
+.pain-item {
+  display: flex;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--gray-700);
+  font-size: 14px;
+}
+.pain-item:last-child { border-bottom: none; }
+.pain-tag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 4px 8px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+.tag-critical { background: var(--critical); color: white; }
+.tag-high { background: var(--high); color: white; }
+.tag-medium { background: var(--medium); color: white; }
+
+/* AS-IS / TO-BE Table */
+.asis-tobe {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.asis-tobe th {
+  text-align: left;
+  padding: 8px 12px;
+  background: var(--gray-700);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+}
+.asis-tobe td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--gray-700);
+  vertical-align: top;
+}
+.asis-tobe td.label-col { font-weight: 700; color: var(--gray-300); }
+
+/* Frame cards */
+.frame-card {
+  padding: 12px;
+  border-left: 3px solid var(--accent);
+  background: rgba(255,255,255,0.03);
+  margin-bottom: 12px;
+}
+.frame-card .name {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+.frame-card .why {
+  font-size: 13px;
+  color: var(--gray-500);
+}
+
+/* One promise */
+.promise {
+  background: var(--fg);
+  color: var(--bg);
+  padding: 48px 32px;
+  border-radius: 16px;
+  text-align: center;
+}
+.promise .quote {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+
+/* Confidence */
+.confidence-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+.confidence-num {
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+.confidence-label {
+  font-size: 12px;
+  color: var(--gray-500);
+}
+
+@media print {
+  body { padding: 24px; }
+  .box { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>{프로젝트명}</h1>
+  <div class="meta">
+    <span>MODE · {PLAN | DIAGNOSE}</span>
+    <span>DOMAIN · {산업}</span>
+    <span>DATE · {YYYY-MM-DD}</span>
+    <span>FRAMES · {N}개</span>
+  </div>
+</div>
+
+<div class="bento-grid">
+
+  <!-- [1] Strategic Questions -->
+  <div class="box dark span-8">
+    <div class="label">01 · Strategic Questions</div>
+    <div class="title">핵심 질문 3가지</div>
+    <div class="body">
+      <ol style="padding-left: 20px;">
+        <li>{질문1}</li>
+        <li>{질문2}</li>
+        <li>{질문3}</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- [10] Confidence -->
+  <div class="box span-4">
+    <div class="label">Confidence</div>
+    <div class="confidence-bar">
+      <div class="confidence-num">{N}</div>
+      <div class="confidence-label">{verified | inferred | assumed | guessed}<br/>{근거}</div>
+    </div>
+  </div>
+
+  <!-- [2] 3-Axis Routing -->
+  <div class="box span-12">
+    <div class="label">02 · 3-Axis Routing</div>
+    <div class="title">시간 · 고객 · 실행</div>
+    <table class="asis-tobe">
+      <thead><tr><th>축</th><th>분류</th><th>프레임</th><th>WHY</th></tr></thead>
+      <tbody>
+        <tr><td class="label-col">시간</td><td>{Complex/중기}</td><td>{프레임}</td><td>{이유}</td></tr>
+        <tr><td class="label-col">고객</td><td>{단계}</td><td>{프레임}</td><td>{이유}</td></tr>
+        <tr><td class="label-col">실행</td><td>{Phase}</td><td>{프레임}</td><td>{이유}</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- [3] Frame Cards -->
+  <div class="box span-6">
+    <div class="label">03 · Selected Frames</div>
+    <div class="title">선택 프레임</div>
+    <div class="body">
+      <div class="frame-card">
+        <div class="name">{프레임1}</div>
+        <div class="why">{1줄 정의 · 적용 WHY}</div>
+      </div>
+      <div class="frame-card">
+        <div class="name">{프레임2}</div>
+        <div class="why">{1줄 정의 · 적용 WHY}</div>
+      </div>
+      <div class="frame-card">
+        <div class="name">{프레임3}</div>
+        <div class="why">{1줄 정의 · 적용 WHY}</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- [4] Pain Points -->
+  <div class="box span-6">
+    <div class="label">04 · Pain Points</div>
+    <div class="title">6대 페인</div>
+    <ul class="pain-list">
+      <li class="pain-item"><span class="pain-tag tag-critical">CRITICAL</span><span>{페인1}</span></li>
+      <li class="pain-item"><span class="pain-tag tag-critical">CRITICAL</span><span>{페인2}</span></li>
+      <li class="pain-item"><span class="pain-tag tag-high">HIGH</span><span>{페인3}</span></li>
+      <li class="pain-item"><span class="pain-tag tag-high">HIGH</span><span>{페인4}</span></li>
+      <li class="pain-item"><span class="pain-tag tag-medium">MEDIUM</span><span>{페인5}</span></li>
+      <li class="pain-item"><span class="pain-tag tag-medium">MEDIUM</span><span>{페인6}</span></li>
+    </ul>
+  </div>
+
+  <!-- [5] AS-IS / TO-BE -->
+  <div class="box span-12">
+    <div class="label">05 · AS-IS / TO-BE</div>
+    <div class="title">현재 vs 목표</div>
+    <table class="asis-tobe">
+      <thead><tr><th>영역</th><th>AS-IS</th><th>TO-BE</th></tr></thead>
+      <tbody>
+        <tr><td class="label-col">인지</td><td>{현재}</td><td>{목표}</td></tr>
+        <tr><td class="label-col">검토</td><td>{현재}</td><td>{목표}</td></tr>
+        <tr><td class="label-col">구매</td><td>{현재}</td><td>{목표}</td></tr>
+        <tr><td class="label-col">유지</td><td>{현재}</td><td>{목표}</td></tr>
+        <tr><td class="label-col">옹호</td><td>{현재}</td><td>{목표}</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- [6] Additional Issues -->
+  <div class="box span-4">
+    <div class="label">06 · Additional</div>
+    <div class="title">보완축</div>
+    <div class="body">
+      <strong>경쟁</strong>: {내용}<br/>
+      <strong>타깃</strong>: {내용}<br/>
+      <strong>SEO·콘텐츠</strong>: {내용}<br/>
+      <strong>CX</strong>: {내용}<br/>
+      <strong>측정</strong>: {내용}
+    </div>
+  </div>
+
+  <!-- [7] FAQ Gap -->
+  <div class="box span-4">
+    <div class="label">07 · FAQ Gap</div>
+    <div class="title">사용자 질문 역설계</div>
+    <div class="body">
+      Q: {질문1}<br/>→ {갭1}<br/><br/>
+      Q: {질문2}<br/>→ {갭2}<br/><br/>
+      Q: {질문3}<br/>→ {갭3}
+    </div>
+  </div>
+
+  <!-- [8] Counter-Metric Guard -->
+  <div class="box span-4">
+    <div class="label">08 · Counter-Metric Guard</div>
+    <div class="title">NSM 과적화 방지</div>
+    <div class="body">
+      <strong>NSM</strong>: {지표}<br/>
+      <strong>가드 1</strong>: {지표}<br/>
+      <strong>가드 2</strong>: {지표}<br/>
+      <strong>가드 3</strong>: {지표}
+    </div>
+  </div>
+
+  <!-- [9] One Promise -->
+  <div class="span-12">
+    <div class="promise">
+      <div class="label" style="color:var(--gray-500);">09 · One Promise</div>
+      <div class="quote" style="margin-top:16px;">{단일 약속/본질 한 문장}</div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
