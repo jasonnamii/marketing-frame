@@ -1,10 +1,10 @@
 ---
-name: marketing-frame-engine
-description: 마케팅 프레임 라우터 v1.0. 140+ 프레임 × 3축 라우팅(시간·고객·실행) × 2모드(기획·진단) × 듀얼 출력(.md+.html 벤토). 산업별 6프레임 레시피. P1: 마케팅프레임, 마케팅엔진, 프레임라우터, 마케팅진단, 마케팅기획, 캠페인진단, 캠페인기획, 벤토마케팅, 한장마케팅, AS-IS, TO-BE, Pain Points, Strategic Questions, FAQ Gap, Cynefin, OODA, NSM Counter, HEAVY-LIGHT, JTBD, AARRR, 4P, STP, SWOT, PLG, Four Realms, Wardley, Strategy Diamond. P2: 진단해줘, 기획해줘, 라우팅해줘, 벤토로 만들어줘, diagnose, plan, route. P3: marketing frame router, frame selection, bento marketing canvas, MECE frame routing. P4: 캠페인 점검 시, 신제품 출시 전, 성장 정체 진단 시. P5: .md로, .html로, 벤토로. NOT: 카피생성(→copywriting-engine), 피치덱(→bp-guide), 재무모델(→financial-model), UI·랜딩(→ui-action-designer), 사업전략(→biz-skill), 본질1프레임(→one-shot-graph), 단일사례(→benchmark-skill), IMC실행(→brand-campaign), 광고튜닝(→ads-playbook).
+name: marketing-frame
+description: 마케팅 프레임 라우터 v1.0. 140+ 프레임 × 3축 라우팅(시간·고객·실행) × 2모드(기획·진단) × 듀얼 출력(.md+.html 벤토). 산업별 6프레임 레시피. P1: 마케팅프레임, 마케팅엔진, 프레임라우터, 마케팅진단, 마케팅기획, 캠페인진단, 캠페인기획, 벤토마케팅, 한장마케팅, AS-IS, TO-BE, Pain Points, Strategic Questions, FAQ Gap, Cynefin, OODA, NSM Counter, HEAVY-LIGHT, JTBD, AARRR, 4P, STP, SWOT, PLG, Four Realms, Wardley, Strategy Diamond. P2: 진단해줘, 기획해줘, 라우팅해줘, 벤토로 만들어줘, diagnose, plan, route. P3: marketing frame router, frame selection, bento marketing canvas, MECE frame routing. P4: 캠페인 점검 시, 신제품 출시 전, 성장 정체 진단 시. P5: .md로, .html로, 벤토로. NOT: 카피생성(→copywriting-skill), 피치덱(→bp-guide), 재무모델(→financial-model), UI·랜딩(→ui-designer), 사업전략(→biz-skill), 본질1프레임(→visualize-skill), 단일사례(→benchmark-skill), IMC실행(→brand-campaign), 광고튜닝(→media-buying).
 license: Proprietary. 형(Jason) 개인 사용.
 ---
 
-# marketing-frame-engine v1.0
+# Marketing Frame — 마케팅 프레임
 
 > 입력(상황·자료·미션) → 3축 라우팅(시간·고객·실행) → 프레임 3~6개 자동 선택 → 벤토 슬롯 채움 → md+html 듀얼 출력
 
@@ -198,14 +198,14 @@ P1·P2 단어 hit OR 마케팅 기획·진단 맥락 + 다음 중 1개:
 
 | 후속 | 위임 |
 |---|---|
-| 카피 | copywriting-engine |
+| 카피 | copywriting-skill |
 | BP·피치덱 | bp-guide |
 | 재무 시나리오 | financial-model |
-| UI·랜딩 | ui-action-designer |
+| UI·랜딩 | ui-designer |
 | 사례 벤치마킹 | benchmark-skill |
 | 리서치 심화 | research-frame |
-| 협상·계약 | negotiation-skill·contract-reviewer |
-| 광고 세팅 | ads-playbook |
+| 협상·계약 | negotiation-skill·contract-consulting |
+| 광고 세팅 | media-buying |
 | IMC 실행 | brand-campaign |
 | 사업전략 | biz-skill |
 
@@ -266,4 +266,4 @@ UP §CONFIDENCE 준수.
 - references/bento-template.md (옵시디언 MD 템플릿)
 - references/bento-template.html (벤토 HTML 템플릿)
 
-원본 리서치: VAULT/_skills research/marketing-frame-engine/ (00~06 카테고리별)
+원본 리서치: VAULT/_skills research/marketing-frame/ (00~06 카테고리별)
