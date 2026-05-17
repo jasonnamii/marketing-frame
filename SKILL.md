@@ -8,9 +8,30 @@ license: Proprietary. 형(Jason) 개인 사용.
 
 > 입력(상황·자료·미션) → 3축 라우팅(시간·고객·실행) → 프레임 3~6개 자동 선택 → 벤토 슬롯 채움 → md+html 듀얼 출력
 
+
+## Skill Boundaries
+
+- **하는 것** — 마케팅 프레임 라우터 v1.0.
+- **안 하는 것** — 카피생성(→copywriting-skill), 피치덱(→bp-guide), 재무모델(→financial-model), UI·랜딩(→ui-designer), 사업전략(→biz-skill), 본질1프레임(→visualize-skill), 단일사례(→benchmark-skill), IMC실행(→brand-campaign), 광고튜닝(→media-buying).
+
 **별칭 흡수**: 마케팅프레임 = 마케팅엔진 = 프레임라우터 = 벤토마케팅 = 한장마케팅. 마케팅진단·마케팅기획·캠페인진단·캠페인기획 모두 본 스킬로 라우팅. 클래식 4P·STP·SWOT 부터 디지털 AARRR·JTBD·CPF, 메타 Cynefin·OODA·Wardley·Strategy Diamond 까지 140+ 프레임 DB 보유.
 
 기존 스킬과 경계: **프레임 라우터 전용**. 프레임 도출까지만 담당, 카피·BP·재무·UI 등 실행은 위임.
+
+## When to Use
+
+- 사용자가 "진단해줘", "기획해줘", "라우팅해줘", "벤토로 만들어줘", "diagnose" 같은 표현으로 발동
+- 캠페인 점검 시, 신제품 출시 전, 성장 정체 진단 시.
+- **안 쓸 때** — 카피생성(→copywriting-skill), 피치덱(→bp-guide), 재무모델(→financial-model), UI·랜딩(→ui-designer), 사업전략(→biz-skill), 본질1프레임(→visualize-skill), 단일사례(→benchmark-skill), IMC실행(→brand-campaign), 광고튜닝(→media-buying).
+
+
+## Prerequisites
+
+| # | 체크 | 미충족 시 |
+|---|------|-----------|
+| 1 | 대상·입력 명확 (스킬 발동 의도 확인) | 1줄 확인 후 진입 |
+| 2 | references/ 폴더 접근 가능 | inline fallback |
+
 
 ## 절대 규칙
 
@@ -245,7 +266,35 @@ UP §CONFIDENCE 준수.
 - 선택 프레임: HEAVY-LIGHT · Four Realms · Cohort · RFM
 - One Promise: "Heavy 충성층 함정에서 Light Buyer 확장으로 성장축 전환"
 
-## Gotchas
+## Output Path
+
+| 산출물 | 경로 |
+|---|---|
+| 주 산출물 | `mnt/outputs/marketing-frame_{topic}_{YYYY-MM-DD}.md` |
+| 형식 | .md로, .html로, 벤토로. |
+| 리서치 결과 (해당 시) | `{VAULT}/_skills research/marketing-frame/{YYYY-MM-DD}_{topic}.md` |
+
+## Reference Index
+
+| 파일 | 내용 | 언제 |
+|---|---|---|
+| `references/bento-template.md` | bento template | 해당 단계 진입 시 |
+| `references/frames-db.md` | frames db | 해당 단계 진입 시 |
+| `references/recipes.md` | recipes | 해당 단계 진입 시 |
+| `references/routing-matrix.md` | routing matrix | 해당 단계 진입 시 |
+
+
+## Next Phase
+
+본 스킬 작업 후 자연스럽게 이어지는 흐름:
+
+- 후속 작업 → `copywriting-skill`
+- 후속 작업 → `bp-guide`
+- 후속 작업 → `financial-model`
+- 후속 작업 → `ui-designer`
+- 후속 작업 → `biz-skill`
+
+## Failure Modes (Gotchas)
 
 | 함정 | 대응 |
 |---|---|
@@ -257,6 +306,14 @@ UP §CONFIDENCE 준수.
 | 작업 라벨(Y2·4축·C:E:W:) 산출물 누출 | NO_WORK_LABEL 블록 자체 스캔 통과 필수 |
 | `evidence_body` 없는 Confidence 수치 | UP §CONFIDENCE 위반 — 근거 enum 4종 중 1개 의무 |
 | 프레임 카드에 1차 출처 누락 | references/frames-db.md 포인터 또는 Sources 섹션 추가 |
+
+
+## ❌ WRONG vs ✅ CORRECT
+
+```
+❌ WRONG: 트리거 단어만 보고 발동 — 본질·범위 확인 ✗ → 오발동·범위 이탈
+✅ CORRECT: Skill Boundaries·When to Use 확인 후 발동 → 본질 작업만 수행
+```
 
 ## References
 
