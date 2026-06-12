@@ -1,5 +1,6 @@
 ---
 name: marketing-frame
+version: 1.0
 description: |
   마케팅 프레임 라우터 v1.0. 140+ 프레임 × 3축 라우팅(시간·고객·실행) × 2모드(기획·진단) × 듀얼 출력(.md+.html 벤토). 산업별 6프레임 레시피. 트리거: 마케팅프레임, 마케팅엔진, 프레임라우터, 마케팅진단, 마케팅기획, 캠페인진단, 캠페인기획, 벤토마케팅, 한장마케팅, AS-IS, TO-BE, Pain Points, Strategic Questions, FAQ Gap, Cynefin, OODA, NSM Counter. NOT: 카피생성(→copywriting-skill), 피치덱(→bp-guide), 재무모델(→financial-model), UI·랜딩(→ui-designer), 사업전략(→biz-skill), 본질1프레임(→visualize-skill), 단일사례(→benchmark-skill), IMC실행(→brand-campaign), 광고튜닝(→media-buying).
 license: Proprietary. 형(Jason) 개인 사용.
